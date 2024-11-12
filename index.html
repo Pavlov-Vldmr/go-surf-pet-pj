@@ -10,43 +10,129 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/swiper.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="./js/swiper.min.js"></script>
     <script src="./script.js"></script>
 
     <title>Clear scss project</title>
     <!-- covmpilation "scss" to 'css' read './readme' -->
     <!-- use 'jquery' || end './index.html' -->
-  </head>
 
+    <style>
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
   <body>
-    <header></header>
-    <main>
-      <section></section>
-      <section class="test-class">
-        <div class="container">
-          <p class="test">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-            quos dolor iure at nobis nihil aliquid quod, repellendus voluptate?
-            Nihil architecto delectus aliquam quos nam saepe hic, sit molestiae
-            est.
-          </p>
-          <p class="test">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-            quos dolor iure at nobis nihil aliquid quod, repellendus voluptate?
-            Nihil architecto delectus aliquam quos nam saepe hic, sit molestiae
-            est.
-          </p>
-          <p class="test">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-            quos dolor iure at nobis nihil aliquid quod, repellendus voluptate?
-            Nihil architecto delectus aliquam quos nam saepe hic, sit molestiae
-            est.
-          </p>
+    <header class="header">
+      <div class="nav">
+        <div class="logo">
+          <span class="logo__text">go - surf</span>
         </div>
-      </section>
-      <section></section>
-    </main>
+        <ul class="nav_container">
+          <li>
+            <a href="">
+              <img
+                height="46px"
+                width="58px"
+                src="./assets/images/icons/Surf.svg"
+                alt=""
+              />
+              <span>Surf</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img
+                height="32px"
+                width="50px"
+                src="./assets/images/icons/Travel.svg"
+                alt=""
+              />
+              <span>Travel</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img
+                height="40px"
+                width="39px"
+                src="./assets/images/icons/Camp.svg"
+                alt=""
+              />
+              <span>Sleep</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img
+                height="44px"
+                width="16px"
+                src="./assets/images/icons/surf-board.svg"
+                alt=""
+              />
+              <span>Shop</span>
+            </a>
+          </li>
+        </ul>
+        <div class="date">
+          <span class="date__dd">DD</span>
+          <div>
+            <span class="date__mm">mm</span>
+            <span>|</span>
+            <span class="date__yy">yyyy</span>
+          </div>
+        </div>
+        <span class="location"
+          ><img
+            src="./assets/images/icons/location-white.svg"
+            width="11px"
+            height="13px"
+            alt=""
+          />California</span
+        >
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="slider">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 8</div>
+            <div class="swiper-slide">Slide 9</div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </section>
   </body>
 
   <!-- jquery -->
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> -->
 </html>

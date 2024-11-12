@@ -1,4 +1,4 @@
-:root{
+:root {
   // --getter-x: 10px;
 }
 
@@ -6,6 +6,7 @@ body {
   font-family: $default-font;
   color: $text-color;
   font-size: 1rem;
+  background-color: $bg-color;
 }
 
 // custom scrollbar
@@ -33,16 +34,21 @@ body {
 
 // custom scrollbar END
 
+a {
+  text-decoration: none;
+  color: $text-color;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
   }
 }
 
-.container{
+.container {
   width: 100%;
-  padding-right: var(--getter-x , 0.75rem);
-  padding-left: var(--getter-x , 0.75rem);
+  padding-right: var(--getter-x, 0.75rem);
+  padding-left: var(--getter-x, 0.75rem);
   margin-right: auto;
   margin-left: auto;
 }
