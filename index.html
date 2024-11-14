@@ -19,28 +19,7 @@
     <!-- covmpilation "scss" to 'css' read './readme' -->
     <!-- use 'jquery' || end './index.html' -->
 
-    <style>
-      .swiper {
-        width: 100%;
-        height: 100%;
-      }
-
-      .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    </style>
+    <style></style>
   </head>
   <body>
     <header class="header">
@@ -114,21 +93,55 @@
     </header>
 
     <section class="hero">
+      <div class="logo-text">
+        <span>GO <br />SURF</span>
+      </div>
       <div class="slider">
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 4</div>
-            <div class="swiper-slide">Slide 5</div>
-            <div class="swiper-slide">Slide 6</div>
-            <div class="swiper-slide">Slide 7</div>
-            <div class="swiper-slide">Slide 8</div>
-            <div class="swiper-slide">Slide 9</div>
+            <div class="swiper-slide">
+              <div class="map">
+                <img src="./assets/images/map-north.svg" />
+              </div>
+              <span class="text-addictioanl">SURF</span>
+              <span class="text-location">north shore</span>
+              <span class="text-addictioanl">Condition</span>
+              <span class="text">Radical</span>
+            </div>
+            <div class="swiper-slide">
+              <div class="map">
+                <img src="./assets/images/map-south.svg" />
+              </div>
+              <span class="text-addictioanl">SURF</span>
+              <span class="text-location">south shore</span>
+              <span class="text-addictioanl">Condition</span>
+              <span class="text">Radical</span>
+            </div>
+            <div class="swiper-slide">
+              <div class="map">
+                <img src="./assets/images/map-west.svg" />
+              </div>
+              <span class="text-addictioanl">SURF</span>
+              <span class="text-location">west shore</span>
+              <span class="text-addictioanl">Condition</span>
+              <span class="text">Radical</span>
+            </div>
+            <div class="swiper-slide">
+              <div class="map">
+                <img src="./assets/images/map-east.svg" />
+              </div>
+              <span class="text-addictioanl">SURF</span>
+              <span class="text-location">east shore</span>
+              <span class="text-addictioanl">Condition</span>
+              <span class="text">Radical</span>
+            </div>
           </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+          <div class="navigation-buttons">
+            <div class="btn swiper-button-next"></div>
+            <div class="btn swiper-button-prev"></div>
+          </div>
+
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
