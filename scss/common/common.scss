@@ -34,9 +34,76 @@ body {
 
 // custom scrollbar END
 
+.text-addictioanl {
+  color: white;
+  opacity: 0.5;
+  line-height: 32px;
+  letter-spacing: 7.33px;
+  font-size: 22px;
+  text-transform: uppercase;
+  position: relative;
+  margin-right: 80px;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 1px;
+    top: 15px;
+    left: -120px;
+    background: #fff;
+  }
+}
+
+.text-thin {
+  font-weight: 100;
+}
+
+.bg-text {
+  position: absolute;
+  opacity: 0.05;
+  span {
+    font-size: 200px;
+    line-height: 156px;
+    font-weight: 800;
+  }
+}
+
 a {
   text-decoration: none;
   color: $text-color;
+}
+
+h2 {
+  font-size: 80px;
+  position: relative;
+  width: fit-content;
+  line-height: 156px;
+  font-weight: 800;
+  color: $text-color;
+  margin-left: 245px;
+  margin-top: 157px;
+
+  text-transform: uppercase;
+
+  &::before {
+    content: " ";
+    right: 0;
+    top: 30px;
+    position: absolute;
+    display: block;
+    height: 1px;
+    width: 80px;
+    background-color: $color_accent;
+    // bottom: 0;
+  }
+}
+
+h3 {
+  font-size: 40px;
+  line-height: 86px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-right: 80px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
