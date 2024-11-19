@@ -485,6 +485,7 @@ h3 {
   display: flex;
   flex-direction: column;
   height: inherit;
+  overflow: hidden;
 }
 .weather-map__container .weather-map__item .weather-map__title {
   display: flex;
@@ -504,7 +505,13 @@ h3 {
   width: 100%;
   height: 100%;
 }
-.weather-map__container .weather-map__item .map .map__mark {
+.weather-map__container .weather-map__item .map__marks {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 5px;
+}
+.weather-map__container .weather-map__item .map__marks .map__mark {
   display: block;
   height: 24px;
   width: 24px;
@@ -513,38 +520,43 @@ h3 {
   box-shadow: 0px 0px 19px rgba(74, 246, 205, 0.8);
   transition: all 0.4s ease-in-out;
   transform: rotate(45deg);
+  z-index: 2;
 }
-.weather-map__container .weather-map__item .map .map__mark .weather-info {
+.weather-map__container .weather-map__item .map__marks .map__mark:hover {
+  display: inline-block;
+  border-radius: 0 50% 50% 50%;
+  cursor: crosshair;
+}
+.weather-map__container .weather-map__item .map__marks .weather-info {
   box-sizing: border-box;
   padding: 28px 32px;
-  display: flex;
-  opacity: 0;
+  display: none;
+  margin-bottom: 20px;
   flex-direction: column;
   width: 283px;
   height: 216px;
   border-radius: 6px;
   background-color: rgba(15, 16, 16, 0.5019607843);
-  transform: rotate(-45deg);
   position: absolute;
-  top: -188px;
-  left: -224px;
+  top: -215px;
+  left: -126px;
 }
-.weather-map__container .weather-map__item .map .map__mark .weather-info__title {
+.weather-map__container .weather-map__item .map__marks .weather-info__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.weather-map__container .weather-map__item .map .map__mark .weather-info__title img {
+.weather-map__container .weather-map__item .map__marks .weather-info__title img {
   transform: rotate(180deg);
 }
-.weather-map__container .weather-map__item .map .map__mark .weather-info__title span {
+.weather-map__container .weather-map__item .map__marks .weather-info__title span {
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
   text-transform: uppercase;
   position: relative;
 }
-.weather-map__container .weather-map__item .map .map__mark .weather-info__title span::after {
+.weather-map__container .weather-map__item .map__marks .weather-info__title span::after {
   content: "";
   display: block;
   height: 1px;
@@ -553,84 +565,75 @@ h3 {
   position: absolute;
   bottom: -10px;
 }
-.weather-map__container .weather-map__item .map .map__mark .weather-info__location {
+.weather-map__container .weather-map__item .map__marks .weather-info__location {
   font-size: 16px;
   line-height: 19px;
   margin-top: 20px;
 }
-.weather-map__container .weather-map__item .map .map__mark .weather-info__counts {
+.weather-map__container .weather-map__item .map__marks .weather-info__counts {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   flex-grow: 1;
 }
-.weather-map__container .weather-map__item .map .map__mark .weather-info__counts div {
+.weather-map__container .weather-map__item .map__marks .weather-info__counts div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.weather-map__container .weather-map__item .map .map__mark .weather-info__counts div .count {
+.weather-map__container .weather-map__item .map__marks .weather-info__counts div .count {
   font-size: 16px;
   line-height: 23px;
   font-weight: 700;
 }
-.weather-map__container .weather-map__item .map .map__mark .weather-info__counts div .title {
+.weather-map__container .weather-map__item .map__marks .weather-info__counts div .title {
   font-size: 10px;
   text-transform: uppercase;
   font-weight: 100;
   line-height: 12px;
 }
-.weather-map__container .weather-map__item .map .map__mark:hover {
-  display: inline-block;
-  border-radius: 0 50% 50% 50%;
-  cursor: crosshair;
-}
-.weather-map__container .weather-map__item .map .map__mark:hover .weather-info {
-  opacity: 1;
-  transition: all 0.4s ease-in-out;
-}
-.weather-map__container .weather-map__item .map #mapMark1 {
+.weather-map__container .weather-map__item .map__marks:nth-child(2) {
   position: absolute;
   top: 47%;
   left: 0px;
   z-index: 999;
 }
-.weather-map__container .weather-map__item .map #mapMark2 {
+.weather-map__container .weather-map__item .map__marks:nth-child(3) {
   position: absolute;
   top: 43%;
   left: 11%;
 }
-.weather-map__container .weather-map__item .map #mapMark3 {
+.weather-map__container .weather-map__item .map__marks:nth-child(4) {
   position: absolute;
   top: 50%;
   left: 23%;
 }
-.weather-map__container .weather-map__item .map #mapMark4 {
+.weather-map__container .weather-map__item .map__marks:nth-child(5) {
   position: absolute;
   top: 33%;
   left: 46%;
 }
-.weather-map__container .weather-map__item .map #mapMark5 {
+.weather-map__container .weather-map__item .map__marks:nth-child(6) {
   position: absolute;
   top: 78%;
   left: 35%;
 }
-.weather-map__container .weather-map__item .map #mapMark6 {
+.weather-map__container .weather-map__item .map__marks:nth-child(7) {
   position: absolute;
   top: 89%;
   left: 52%;
 }
-.weather-map__container .weather-map__item .map #mapMark7 {
+.weather-map__container .weather-map__item .map__marks:nth-child(8) {
   position: absolute;
   top: 60%;
   left: 68%;
 }
-.weather-map__container .weather-map__item .map #mapMark8 {
+.weather-map__container .weather-map__item .map__marks:nth-child(9) {
   position: absolute;
   top: 44%;
   left: 85%;
 }
-.weather-map__container .weather-map__item .map #mapMark9 {
+.weather-map__container .weather-map__item .map__marks:nth-child(10) {
   position: absolute;
   top: 79%;
   left: 90%;

@@ -13,6 +13,7 @@
       display: flex;
       flex-direction: column;
       height: inherit;
+      overflow: hidden;
       .weather-map__title {
         display: flex;
         flex-direction: column;
@@ -33,33 +34,42 @@
 
         position: relative;
 
-        .map__mark {
-          display: block;
-          height: 24px;
-          width: 24px;
-          background-color: $color_accent;
-          border-radius: 50%;
-          box-shadow: 0px 0px 19px rgba(74, 246, 205, 0.8);
-          transition: all 0.4s ease-in-out;
-          transform: rotate(45deg);
-          // z-index: 9;
+        &__marks {
+          position: relative;
+          display: inline-block;
+          box-sizing: border-box;
+          padding: 5px;
+          .map__mark {
+            display: block;
+            height: 24px;
+            width: 24px;
+            background-color: $color_accent;
+            border-radius: 50%;
+            box-shadow: 0px 0px 19px rgba(74, 246, 205, 0.8);
+            transition: all 0.4s ease-in-out;
+            transform: rotate(45deg);
+            z-index: 2;
+
+            &:hover {
+              display: inline-block;
+              border-radius: 0 50% 50% 50%;
+              cursor: crosshair;
+            }
+          }
 
           .weather-info {
             box-sizing: border-box;
             padding: 28px 32px;
-            display: flex;
-            opacity: 0;
+            display: none;
+            margin-bottom: 20px;
             flex-direction: column;
             width: 283px;
             height: 216px;
             border-radius: 6px;
-            // opacity: 0.7;
             background-color: #0f101080;
-            transform: rotate(-45deg);
             position: absolute;
-            top: -188px;
-            left: -224px;
-            // z-index: 999;
+            top: -215px;
+            left: -126px;
 
             &__title {
               display: flex;
@@ -122,61 +132,49 @@
             }
           }
 
-          &:hover {
-            display: inline-block;
-            border-radius: 0 50% 50% 50%;
-            cursor: crosshair;
-          }
-
-          &:hover .weather-info {
-            opacity: 1;
-            transition: all 0.4s ease-in-out;
-          }
-        }
-        #mapMark {
-          &1 {
+          &:nth-child(2) {
             position: absolute;
             top: 47%;
             left: 0px;
             z-index: 999;
           }
-          &2 {
+          &:nth-child(3) {
             position: absolute;
             top: 43%;
             left: 11%;
             // z-index: 9;
           }
-          &3 {
+          &:nth-child(4) {
             position: absolute;
             top: 50%;
             left: 23%;
           }
-          &4 {
+          &:nth-child(5) {
             position: absolute;
             top: 33%;
             left: 46%;
           }
-          &5 {
+          &:nth-child(6) {
             position: absolute;
             top: 78%;
             left: 35%;
           }
-          &6 {
+          &:nth-child(7) {
             position: absolute;
             top: 89%;
             left: 52%;
           }
-          &7 {
+          &:nth-child(8) {
             position: absolute;
             top: 60%;
             left: 68%;
           }
-          &8 {
+          &:nth-child(9) {
             position: absolute;
             top: 44%;
             left: 85%;
           }
-          &9 {
+          &:nth-child(10) {
             position: absolute;
             top: 79%;
             left: 90%;
